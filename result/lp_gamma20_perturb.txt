@@ -1,0 +1,21 @@
+Ratio: 0.0016881509510439556,    Mean_test: 359.618,     Mean_test_perturb: 339.061/413.827
+Ratio: 0.002227601872644142,     Mean_test: 80.859,      Mean_test_perturb: 78.229/107.551
+Ratio: 0.002939435066478533,     Mean_test: 79.646,      Mean_test_perturb: 97.554/77.845
+Ratio: 0.0038787355209877476,    Mean_test: 83.225,      Mean_test_perturb: 74.871/103.282
+Ratio: 0.0051181907072353275,    Mean_test: 83.075,      Mean_test_perturb: 73.243/102.074
+Ratio: 0.006753715476057802,     Mean_test: 78.609,      Mean_test_perturb: 82.136/82.268
+Ratio: 0.008911874398713262,     Mean_test: 71.971,      Mean_test_perturb: 74.914/74.953
+Ratio: 0.011759675926531613,     Mean_test: 69.972,      Mean_test_perturb: 72.923/72.963
+Ratio: 0.015517496287539026,     Mean_test: 66.130,      Mean_test_perturb: 67.897/67.861
+Ratio: 0.020476133231743455,     Mean_test: 58.832,      Mean_test_perturb: 53.873/65.753
+Ratio: 0.027019309323811184,     Mean_test: 54.622,      Mean_test_perturb: 60.245/50.460
+Ratio: 0.03565336619338013,      Mean_test: 52.513,      Mean_test_perturb: 57.529/48.598
+Ratio: 0.047046447623256986,     Mean_test: 49.756,      Mean_test_perturb: 54.223/46.181
+Ratio: 0.06208020364648839,      Mean_test: 46.443,      Mean_test_perturb: 49.379/44.327
+Ratio: 0.08191801675764147,      Mean_test: 40.952,      Mean_test_perturb: 39.465/43.122
+Ratio: 0.10809502990225486,      Mean_test: 35.343,      Mean_test_perturb: 36.716/34.496
+Ratio: 0.14263694303218608,      Mean_test: 31.153,      Mean_test_perturb: 31.323/31.307
+Ratio: 0.18821677126103184,      Mean_test: 26.809,      Mean_test_perturb: 26.695/27.136
+Ratio: 0.24836169530031071,      Mean_test: 23.170,      Mean_test_perturb: 23.138/23.371
+Ratio: 0.3277260112325348,       Mean_test: 20.234,      Mean_test_perturb: 20.231/20.345
+
