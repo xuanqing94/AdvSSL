@@ -2,7 +2,7 @@ import numpy as np
 
 def trust_region_solver(M, g, d_max, max_iter=100, stepsize=1.0e-2):
     """Solves trust region problem with gradient descent
-    1/2 * x^T M x + g^T x
+    maximize 1/2 * x^T M x + g^T x
     s.t. |x|_2 <= d_max
     initialize x = g / |g| * d_max
     """
