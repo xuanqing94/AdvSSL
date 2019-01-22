@@ -1,6 +1,6 @@
 import numpy as np
 
-def trust_region_solver(M, g, d_max, max_iter=100, stepsize=1.0e-2):
+def trust_region_solver(M, g, d_max, max_iter=1000, stepsize=4.0e-3):
     """Solves trust region problem with gradient descent
     maximize 1/2 * x^T M x + g^T x
     s.t. |x|_2 <= d_max
