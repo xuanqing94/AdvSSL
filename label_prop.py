@@ -58,12 +58,11 @@ class LabelProp(object):
                 train_features, test_features, train_labels, test_labels
 
     @classmethod
-    def similarity_matrix(cls, X_tr, gamma):
-        tmp = X_tr @ X_tr.T
-        n_tr = X_tr.shape[0]
+    def similarity_matrix(cls, X, gamma):
+        tmp = X @ X.T
+        n_data = X.shape[0]
         diag = np.diag(tmp)
-        S = gamma * (2 * tmp - diag.reshape(1, n_tr) -
-                   diag.reshape(n_tr, 1))
+        S = gamma * (2 * tmp - diag.reshape(1, n_data) - diag.reshape(n_data, 1))
         return np.exp(S)
 
     @classmethod
@@ -233,7 +232,7 @@ def gamma_sensitivity_mnist_sup(lp):
     gamma_adv = [0.01, 0.03, 0.05, 0.07, 0.1, 0.3, 0.5, 0.6, 0.61, 0.63, 0.65, 0.67, 0.7]
     print('Gamma_adv\tAcc\tAcc-eps')
     for g_adv in gamma_adv:
-        mean_te, mean_te_perturb = evaluate(lp, gamma_adv, gamma_test, nl, c_max, flip_eps=False)
+        mean_te, mean_te_perturb = evaluate(lp, g_adv, gamma_test, nl, c_max, flip_eps=False)
         print(f'{g_adv}\t{mean_te}\t{mean_te_perturb}')
         sys.stdout.flush()
 
