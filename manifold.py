@@ -1,6 +1,5 @@
+#!/usr/bin/env python
 import autograd.numpy as np
-from sklearn.datasets import load_diabetes
-from sklearn.datasets import load_svmlight_file
 
 # fix random seed
 np.random.seed(0)
@@ -11,19 +10,10 @@ class ManifoldMethod(object):
         self.features, self.labels = features, labels
         self.labels /= 100.0
 
-    def load_svm_data(self, path, n_features=None, to_dense=False):
-        features, labels = load_svmlight_file(path, n_features)
-        if to_dense:
-            features = features.todense()
-            n_data = features.shape[0]
-            # add a bias term
-            features = np.hstack((features, np.ones(n_data).reshape(-1, 1)))
-        return features, labels 
-    
     def set_ratio(self, train_ratio, label_ratio):
         self.train_ratio = train_ratio
         self.label_ratio = label_ratio
-    
+
     def set_hparam(self, gamma, lam, beta):
         self.gamma = gamma
         self.lam = lam
@@ -92,7 +82,7 @@ class ManifoldMethod(object):
         return (np.mean(mse_lv), np.std(mse_lv)), \
                 (np.mean(mse_uv), np.std(mse_uv)), \
                 (np.mean(mse_tv), np.std(mse_tv))
-    
+
     def training_optimal(self, n_trial=1):
         mse_lv, mse_uv, mse_tv = [], [], []
         for k_trial in range(n_trial):
@@ -121,7 +111,7 @@ class ManifoldMethod(object):
         mse_u = np.sum((self.X_u @ w.T - self.y_u) ** 2) / self.X_u.shape[0]
         mse_t = np.sum((self.X_t @ w.T - self.y_t) ** 2) / self.X_t.shape[0]
         return mse_l, mse_u, mse_t
-      
+
 
 if __name__ == "__main__":
     filepath = "./data/cpusmall/cpusmall_scale"
